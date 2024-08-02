@@ -55,7 +55,7 @@ app.delete('/delete/:name', authorize, (req, res) => {
 });
 
 // Ruta para servir los videos
-app.get('/video/:name', (req, res) => {
+app.get('/file/:name', (req, res) => {
   const videoName = req.params.name;
   const videoPath = path.join(VIDEOS_DIR, videoName);
   res.sendFile(videoPath, (err) => {
